@@ -7,3 +7,5 @@
 ```sh
 python3 app.py token.txt folder_id.txt 
 ```
+
+## Видео: https://drive.google.com/file/d/1ofx5tNfLHSaYrXoRtZq77h0OFvpVsLSg/view?usp=sharing
