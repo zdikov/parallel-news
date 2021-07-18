@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    button {
+        background-color: white
+        border: none;
+        width: 100%;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline;
+        font-size: 32px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Выберите источник новостей</title>
+</head>
+<body>
+<h1>Выберите источник новостей</h1>
+{% for item in news_sites %}
+    <form action="init" method="POST">
+        <button type="submit" name="url" value="{{ item['url']}}">{{ item['title'] }}</button>
+    </form>
+{% endfor %}
+
+</body>
+</html>
+

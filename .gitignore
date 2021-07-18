@@ -1,0 +1,5 @@
+venv
+token.txt
+folder_id.txt
+.idea
+__pycache__

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<style>
+    .original {
+        width: 45%;
+        float: left;
+        text-align: justify;
+
+        padding-right: 30px;
+        padding-left: 50px;
+    }
+    .translated {
+        width: 45%;
+        float: right;
+
+        text-align: justify;
+        padding-right: 50px;
+        padding-left: 30px;
+    }
+
+    #panel {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_data['title'] }}</title>
+</head>
+<body>
+<h1>{{ page_data['title'] }}</h1>
+<div id="panel">
+    <a href="{{ url_for('news') }}">Следующая новость</a>
+    <br>
+    <a href="{{ url_for('index') }}">К выбору источника</a>
+</div>
+<div class="original">
+    {{ page_data['html_content'] | safe }}
+</div>
+<div class="translated">
+    {{ translated_content | safe }}
+</div>
+</body>
+</html>
